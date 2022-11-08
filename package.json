@@ -1,0 +1,19 @@
+{
+  "name": "simple-news-rest-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mihail Mihailov",
+  "email": "mihail.dev.io@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^12.0.0",
+    "koa": "^2.13.4",
+    "koa-body": "^6.0.1",
+    "koa-session": "^6.2.0"
+  }
+}
