@@ -1,11 +1,16 @@
-const koa = require('koa');
-const app = new koa();
-const router = require("@koa/router")();
+const Koa = require('koa');
+const Router = require("@koa/router")();
 const session = require("koa-session");
-const koaBody = require('koa-body');
+const json = require("koa-json");
+
+const app = new Koa();
+const router = new Router();
 
 app.use(router.routes());
+app.use(router.allowedMethods());
 app.use(session(app));
-app.use(koaBody());
+app.use(json());
+
+// app.use(koaBody);
 
 module.exports = app;
