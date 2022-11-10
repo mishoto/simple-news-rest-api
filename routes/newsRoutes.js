@@ -1,14 +1,14 @@
+require("koa-body");
 const Router = require("@koa/router"),
-      KoaBody = require("koa-body"),
-      {getNewsId, listAllNews, createNews, updateNews, removeNews} = require("../controllers/newsController");
+    {getById, listAll, createOne, updateOne, removeOne} = require("../controllers/newsController");
 
 const router = new Router({prefix: '/api/v1.0.0'});
 
-router.get('/news', listAllNews)
-router.get('/news/:id', getNewsId)
-router.post('/news/', createNews)
-router.put("/news/:id", updateNews)
-router.delete('/news/:id', removeNews)
+router.get('/news', listAll)
+router.get('/news/:id', getById)
+router.post('/news', createOne)
+router.put("/news/:id", updateOne)
+router.delete('/news/:id', removeOne)
 
 module.exports = {
     routes() {return router.routes()},
